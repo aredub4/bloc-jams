@@ -34,6 +34,10 @@ body.landing {
      height: 100px;
      color: white;
  }
+ .navbar-link:hover {
+   color: rgb(233, 50, 117);
+   background-color: white;
+ }
 
  .links-container .navbar-link {
      display: table-cell;
