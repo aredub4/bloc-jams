@@ -6,7 +6,8 @@ html {
 body {
     font-family: 'Open Sans'; /* sets our font to the "Open Sans" typeface */
     color: white;             /* sets the text color to white */
-    min-height: 100%;         /* says the height of the body must be, at minimum, 100% of the window */
+    min-height: 100%;         /* says the height of the body must be, at minimum, 1
+    00% of the window */
 }
 
  .navbar {
