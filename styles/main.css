@@ -1,14 +1,19 @@
-html {
-    height: 100%; /* makes sure our HTML takes up 100% of the browser window */
-    font-size: 100%;
-}
+*, *::before, *::after {
+     -moz-box-sizing: border-box;
+     -webkit-box-sizing: border-box;
+     box-sizing: border-box;
+ }
 
-body {
-    font-family: 'Open Sans'; /* sets our font to the "Open Sans" typeface */
-    color: white;             /* sets the text color to white */
-    min-height: 100%;         /* says the height of the body must be, at minimum, 1
-    00% of the window */
-}
+html {
+     height: 100%; /* makes sure our HTML takes up 100% of the browser window */
+     font-size: 100%;
+ }
+
+ body {
+     font-family: 'Open Sans';
+     color: white;
+     min-height: 100%;         /* says the height of the body must be, at minimum, 100% of the window */
+ }
 
  .navbar {
      position: relative;
@@ -18,7 +23,7 @@ body {
  }
 
  .navbar .logo {
-     position: relative; /* positioning will be explained in a resource */
+     position: relative;
      left: 2rem;
      cursor: pointer;  /* produces the finger-pointer icon when you hover over the logo */
  }
@@ -30,10 +35,8 @@ body {
      right: 0;
      height: 100px;
      color: white;
- }
- .navbar-link:hover {
-   color: rgb(233, 50, 117);
-   background-color: white;
+     /* #3 */
+     text-decoration: none;
  }
 
  .links-container .navbar-link {
@@ -42,109 +45,64 @@ body {
      height: 100%;
      padding-left: 1rem;
      padding-right: 1rem;
-     /* #3 */
+     /* #4 */
      vertical-align: middle;
      color: white;
      font-size: 0.625rem;
      letter-spacing: 0.05rem;
      font-weight: 700;
      text-transform: uppercase;
-     /* #4 */
+     /* #3 */
      text-decoration: none;
      cursor: pointer;
  }
 
-   /* #5 */
  .links-container .navbar-link:hover {
      color: rgb(233,50,117);
  }
 
- *, *::before, *::after {
-     -moz-box-sizing: border-box;
-     -webkit-box-sizing: border-box;
-     box-sizing: border-box;
- }
+.links-container a:active {
+    background-color: white;
+    color: rgb(233,50,117);
+}
 
-  .container {
+.container {
      margin: 0 auto;
      max-width: 64rem;
- }
+}
 
- .container.narrow {
+.container.narrow {
     max-width: 56rem;
 }
 
-  /* Medium and small screens (640px) */
- @media (min-width: 640px) {
-   html { font-size: 112%; }
+ /* Medium and small screens (640px) */
+@media (min-width: 640px) {
+    html { font-size: 112%; }
 
-   .column {
-         float: left;
-         padding-left: 1rem;
-         padding-right: 1rem;
-     }
-
-     .column.full { width: 100%; }
-     .column.two-thirds { width: 66.7%; }
-     .column.half { width: 50%; }
-     .column.third { width: 33.3%; }
-     .column.fourth { width: 25%; }
-     .column.flow-opposite { float: right; }
-
- }
+    .column {
+        float: left;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .column.full { width: 100%; }
+    .column.two-thirds { width: 66.7%; }
+    .column.half { width: 50%; }
+    .column.third { width: 33.3%; }
+    .column.fourth { width: 25%; }
+    .column.flow-opposite { float: right; }
+}
 
  /* Large screens (1024px) */
  @media (min-width: 1024px) {
-   html { font-size: 120%; }
-   /* Style information will go here */
- }
- body.collection {
-     background-image: url(../assets/images/blurred_backgrounds/blur_bg_2.jpg);
-     background-repeat: no-repeat;
-     background-attachment: fixed;
-     background-position: center center;
-     background-size: cover;
+     html { font-size: 120%; }
  }
 
- .album-covers {
-     position: relative;
- }
+.clearfix::before,
+.clearfix::after {
+   content: " ";
+   display: table;
+}
 
- .collection-album-container {
-     position: relative;
-     margin-top: 30px;
-     margin-bottom: 20px;
-     text-align: center;
- }
-
- .collection-album-container .caption {
-     margin-top: 10px;
- }
-
- .collection-album-container .caption p {
-     font-size: 1rem;
-     font-weight: 300;
-     color: rgba(255, 255, 255, 0.6);
- }
-
- .collection-album-container .caption p a {
-     color: rgba(255, 255, 255, 0.6);
- }
-
- .collection-album-container .caption p a.album-name {
-     color: white;
- }
-
- .collection-album-container img {
-     width: 80%;
- }
-
- .clearfix::before,
- .clearfix::after {
-    content: " ";
-    display: table;
- }
-
- .clearfix::after {
-    clear: both;
- }
+.clearfix::after {
+   clear: both;
+}
